@@ -1,95 +1,114 @@
+Aquí está todo el contenido como un solo archivo HTML:
 
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XG Proyect - Clon de OGame de código abierto</title>
+</head>
+<body>
 
-
-<p align="center"
+<p align="center">
     <a href="https://www.xgproyect.org/" target="_blank">
-        <img align="center" img src="https://xgproyect.org/wp-content/uploads/2019/10/xgp-new-logo-black.png" width="250px" title="XG Proyect" alt="xgp-logo">
+        <img align="center" src="https://xgproyect.org/wp-content/uploads/2019/10/xgp-new-logo-black.png" width="250px" title="XG Proyect" alt="xgp-logo">
     </a>
     <br>
     <strong>X</strong>treme <strong>G</strong>amez <strong>Proyect</strong>o
     <br>
-    <strong>Open-source OGame Clon</strong>
+    <strong>Clon de OGame de código abierto</strong>
 </p>
 
-About
-====
+Acerca de
+=========
 
-XG Proyect (XGP) is an OGame clone open-source web application framework designed for creating game clones, particularly those inspired by the popular game OGame, set in a vast and captivating space-themed universe. Our goal is to offer a package that is as similar as possible to the original, but keeping their original design.
+XG Proyect (XGP) es una aplicación web de código abierto, clon de OGame, diseñada para crear clones del popular juego OGame, ambientado en un vasto y cautivador universo espacial. Nuestro objetivo es ofrecer un paquete lo más similar posible al original, pero manteniendo su diseño original.
 
-## Requirements
+## Requisitos
 
-- PHP 7.4 or greater
-- MySQLi 5.7 or greater
+- PHP 7.4 o superior
+- MySQLi 5.7 o superior
 
-## How to get XG Proyect?
+## ¿Cómo obtener XG Proyect?
 
-### Manually
-This is the simplest and easiest way if you're not a technical person. Download and install XG Proyect will be easy! ;)
+### Manualmente
+Esta es la forma más simple y fácil si no eres una persona técnica. ¡Descargar e instalar XG Proyect será fácil! ;)
 
- 1. Go to [releases](https://github.com/XGProyect/XG-Proyect-v3.x.x/releases)
- 2. Look for the last version and then **assets** and finally look for the `.zip` file.
- 3. Unzip the file, you'll see 2 files and 1 folder.
- 4. Look for the contents of the `upload` folder, only what's inside this one is needed.
- 5. Copy the contents of the `upload` folder to the root on your host. There are hidden files in it, be sure that those are copied over also, specially the `.htaccess` file.
- 6. Make sure that PHP can write to the dir `config` for the new config File.
- 7. If you did everything correct, when you open the site, you'll be taken to the `install/` directory, if not try under `public/install`.
- 8. Using docker, XAMPP or any local stack that you want set the copies files to your root.
+ 1. Ve a [releases](https://github.com/XGProyect/XG-Proyect-v3.x.x/releases)
+ 2. Busca la última versión y luego haz clic en **assets** y finalmente busca el archivo `.zip`.
+ 3. Descomprime el archivo, verás 2 archivos y 1 carpeta.
+ 4. Busca el contenido de la carpeta `upload`, solo lo que está dentro de esta es necesario.
+ 5. Copia el contenido de la carpeta `upload` a la raíz de tu hosting. Hay archivos ocultos, asegúrate de que también se copien, especialmente el archivo `.htaccess`.
+ 6. Asegúrate de que PHP tenga permisos de escritura en el directorio `config` para el nuevo archivo de configuración.
+ 7. Si hiciste todo correctamente, cuando abras el sitio serás dirigido al directorio `install/`, si no, intenta con `public/install`.
+ 8. Usando docker, XAMPP o cualquier stack local que desees, coloca los archivos copiados en tu raíz.
 
 ### Composer
-Composer is a package manager and also a quick way to setup your project.
+Composer es un gestor de paquetes y también una forma rápida de configurar tu proyecto.
 
-1. Run
+1. Ejecuta
 ```
+
 composer create-project xgproyect/xgproyect
-```
-2. Once composer has finishing installing all the dependencies you can use docker, see below.
 
-## How to run XG Proyect?
+```
+2. Una vez que composer haya terminado de instalar todas las dependencias, puedes usar docker (ver abajo).
+
+## ¿Cómo ejecutar XG Proyect?
 ### Docker
-Easiest way to do it, is using Docker.
+La forma más fácil de hacerlo es usando Docker.
 
 ```
+
 docker-compose up
+
 ```
 
-You can also build with different PHP versions:
+También puedes construir con diferentes versiones de PHP:
 ```
+
 docker build -t xgproyect:7.4 --build-arg PHP_VERSION=7.4 .
+
 ```
 
-Or build and run, altogether, specifying a **PHP version**:
+O construir y ejecutar todo junto, especificando una **versión de PHP**:
 ```
+
 docker-compose build --build-arg PHP_VERSION=8.2 && docker-compose up -d
+
 ```
 
-Simple change the **PHP version** to any other **version** that you'd like to test.
+Simplemente cambia la **versión de PHP** a cualquier otra **versión** que desees probar.
 
-### Other ways
-- Other options are also possible like XAMPP, or using it on your own hosting.
+### Otras formas
+- También son posibles otras opciones como XAMPP, o usarlo en tu propio hosting.
 
-### DB Connect defaults
+### Valores por defecto de conexión a la BD
 ```
+
 host=db
 user=root
 password=root
 db=xgp
 prefix=xgp_
+
 ```
 
 ## MailHog
-XGP uses MailHog and PHPMailer as tools for better mailing support. MailHog allows you to intercept emails **locally** and receive them under a convenient panel.
+XGP utiliza MailHog y PHPMailer como herramientas para un mejor soporte de correo. MailHog te permite interceptar correos electrónicos **localmente** y recibirlos en un panel conveniente.
 
-Read our <a href="https://github.com/XGProyect/XG-Proyect-v3.x.x/wiki/MailHog-usage-and-setup" target="_blank">MailHog guide</a> to get started.
+Lee nuestra <a href="https://github.com/XGProyect/XG-Proyect-v3.x.x/wiki/MailHog-usage-and-setup" target="_blank">guía de MailHog</a> para comenzar.
 
-## Who is using XG Proyect?
-We are happy to deliver this software giving others the possibility to have a good OGame Clon.
-On the other hand, it's a pleasure to see people using XG Proyect.
-<a href="https://github.com/XGProyect/XG-Proyect-v3.x.x/issues" target="_blank">Create a ticket</a> on GitHub so I can put your game logo here!
+## ¿Quién está usando XG Proyect?
+Estamos felices de ofrecer este software brindando a otros la posibilidad de tener un buen clon de OGame.
+Por otro lado, es un placer ver a personas usando XG Proyect.
+<a href="https://github.com/XGProyect/XG-Proyect-v3.x.x/issues" target="_blank">Crea un ticket</a> en GitHub para que pueda poner el logo de tu juego aquí.
 
-<img align="center" img src="https://xgproyect.org/wp-content/uploads/2019/10/xgp-new-logo-black.png" width="150px" title="XG Proyect" alt="xgp-logo">
+<img align="center" src="https://xgproyect.org/wp-content/uploads/2019/10/xgp-new-logo-black.png" width="150px" title="XG Proyect" alt="xgp-logo">
 
-## We support
-The following are tools or frameworks that we use to do our coding experience better!
+## Apoyamos
+Las siguientes son herramientas o frameworks que utilizamos para mejorar nuestra experiencia de codificación.
 
 <p>
     <a href="https://codeigniter.com/" rel="nofollow">
@@ -106,5 +125,9 @@ The following are tools or frameworks that we use to do our coding experience be
     </a>
 </p>
 
-## License
-The XG Proyect is open-sourced software licensed under the GPL-3.0 License.
+## Licencia
+XG Proyect es un software de código abierto licenciado bajo la Licencia GPL-3.0.
+
+</body>
+</html>
+```

@@ -1,14 +1,3 @@
-Aquí está todo el contenido como un solo archivo HTML:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XG Proyect - Clon de OGame de código abierto</title>
-</head>
-<body>
 
 <p align="center">
     <a href="https://www.xgproyect.org/" target="_blank">
@@ -127,7 +116,3 @@ Las siguientes son herramientas o frameworks que utilizamos para mejorar nuestra
 
 ## Licencia
 XG Proyect es un software de código abierto licenciado bajo la Licencia GPL-3.0.
-
-</body>
-</html>
-```
